@@ -42,7 +42,11 @@ const Random = () => {
       {isLoading && isClicked && <CircularProgress />}
       {!isLoading && isClicked && (
         <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 5, my: 5, pb: 5, justifyContent: 'center' }}>
-          {surprises.map((val, index) =>
+          {surprises.length === 0 ? (
+            <Typography variant='h6' sx={{color: 'gray', mt: 4}}>
+               Network timeout. Please click the button again.
+            </Typography>
+          ) :surprises.map((val, index) =>
             <Books key={index} cover={val.cover_i} title={val.title} author={val.author_name?.[0]} yearPublish={val.first_publish_year} workKey={val.key} />)}
         </Box>
       )}
