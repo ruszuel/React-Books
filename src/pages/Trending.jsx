@@ -36,7 +36,7 @@ const Trending = () => {
         <Typography variant='h5' sx={{fontWeight: 'bold'}}>Trending Books Today</Typography>
         <Box sx={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 5, my: 5}}>
           {trending.map((val, index) => 
-          <Books key={val.title} cover={val.cover_i} title={val.title} author={val.author_name[0]} yearPublish={val.first_publish_year} index={index + 1}/>)}
+          <Books key={val.key} cover={val.cover_i} title={val.title} author={val.author_name[0]} yearPublish={val.first_publish_year} index={index + 1} workKey={val.key}/>)}
         </Box>
       </Box>
       <DisplayBox data={fiction} title={"Popular Fiction"}/>

@@ -45,7 +45,7 @@ const Heading = () => {
               textDecoration: 'none',
             }}
           >
-            Bookshelf
+            TeokBooky
           </Typography>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -96,7 +96,7 @@ const Heading = () => {
               textDecoration: 'none',
             }}
           >
-            Bookshelf
+            TeokBooky
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (

@@ -53,6 +53,7 @@ const Browse = () => {
                 title={val.title} 
                 author={val.author_name?.[0]}
                 yearPublish={val.first_publish_year}
+                workKey={val.key}
               />
             ))
           )}
