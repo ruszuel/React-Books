@@ -33,8 +33,8 @@ const Random = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: isClicked ? 'flex-start' : 'center', alignItems: 'center', height: '100%', p: 5, gap: 2 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
         <Box>
-          <Typography variant='h5' sx={{ textAlign: 'center' }}>Random Book Discovery</Typography>
-          <Typography variant='subtitle1'>Discover new books with our surprise selection</Typography>
+          <Typography variant='h4' sx={{ textAlign: 'center' }}>Random Book Discovery</Typography>
+          <Typography variant='subtitle1' sx={{ textAlign: 'center' }}>Discover new books with our surprise selection</Typography>
         </Box>
         <Button variant='contained' startIcon={<ShuffleIcon />} onClick={() => showSurprise()}>Surprise Me!</Button>
       </Box>
