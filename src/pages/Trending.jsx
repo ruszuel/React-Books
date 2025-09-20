@@ -35,13 +35,26 @@ const Trending = () => {
       <Box>
         <Typography variant='h5' sx={{fontWeight: 'bold'}}>Trending Books Today</Typography>
         <Box sx={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 5, my: 5}}>
-          {trending.map((val, index) => 
-          <Books key={val.key} cover={val.cover_i} title={val.title} author={val.author_name[0]} yearPublish={val.first_publish_year} index={index + 1} workKey={val.key}/>)}
+          {isLoading
+          ? Array.from(new Array(12)).map((_, index) => (
+              <Books key={index} loading={true} />
+            ))
+          : trending.map((val, index) => (
+              <Books
+                key={val.key}
+                cover={val.cover_i}
+                title={val.title}
+                author={val.author_name[0]}
+                yearPublish={val.first_publish_year}
+                index={index + 1}
+                workKey={val.key}
+              />
+            ))}
         </Box>
       </Box>
-      <DisplayBox data={fiction} title={"Popular Fiction"}/>
-      <DisplayBox data={scienceTech} title={"Science & Technology"}/>
-      <DisplayBox data={history} title={"History & Biography"}/>
+      <DisplayBox data={fiction} title={"Popular Fiction"} loading={isLoading}/>
+      <DisplayBox data={scienceTech} title={"Science & Technology"} loading={isLoading}/>
+      <DisplayBox data={history} title={"History & Biography"} loading={isLoading}/>
     </Box>
   )
 }

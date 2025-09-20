@@ -22,7 +22,6 @@ const About = () => {
 
       <Box 
         sx={{
-          bgcolor: 'gray',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -48,7 +47,7 @@ const About = () => {
           direction="row"
           spacing={1}
           useFlexGap
-          flexWrap="wrap" // <-- Wrap chips instead of overflowing
+          flexWrap="wrap" 
           justifyContent="center"
         >
           {expertise.map((val) => (
